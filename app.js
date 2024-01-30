@@ -66,7 +66,7 @@ function generarNumeroSecreto() {
 
 function condicionesIniciales() 
 {
-    asignarTextoElemento(`h1`,`Juego del numero secreto`);
+    asignarTextoElemento(`h1`,`Juego del numero secreto de Rich!`);
     asignarTextoElemento(`p`,`Indica un numero del 1 al ${numeroMaximo}`);
     numeroSecreto = generarNumeroSecreto();
     intentos = 1;
