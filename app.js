@@ -14,7 +14,7 @@ function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);  
     
     console.log(intentos)
-    while(numeroDeUsuario != numeroSecreto){
+    
     if(numeroDeUsuario === numeroSecreto){
         asignarTextoElemento(`p`,`Acertaste! el numero en ${intentos} ${(intentos == 1) ? 'vez' : 'veces'} `)
         document.getElementById('reiniciar').removeAttribute('disabled');
@@ -28,16 +28,17 @@ function verificarIntento(){
             intentos++;
             if(intentos > numeroMaximoDeIntentos){
                 asignarTextoElemento(`p`,`Llegaste al numero maximo de intentos.`);
+                document.getElementById('reiniciar').removeAttribute('disabled');
                 
             }
             limpiarCaja();
         }
-        document.getElementById('reiniciar').removeAttribute('disabled');
-        break;
+        
+        
         
     }
-        return;
-    }
+      
+    
 
 function limpiarCaja(){
    document.querySelector('#valorUsuario').value = '';
@@ -87,4 +88,3 @@ function reiniciarJuego() {
 }    
 
 condicionesIniciales();
-
